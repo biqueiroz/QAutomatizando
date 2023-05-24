@@ -2,15 +2,15 @@ import login from '../../support/pages/login';
 
 describe('Login with a register user', function() {
 
-    // it('Login successfully', function() {
-    //     login.go();
-    //     login.clickSignin();
-    //     login.verificationUrl();
-    //     login.verificationPage();
-    //     login.userSignin();
-    //     login.submitLogin();
+    it('Login successfully', function() {
+        login.go();
+        login.clickSignin();
+        login.verificationUrl();
+        login.verificationPage();
+        login.userSignin();
+        login.submitLogin();
 
-    // })
+    })
 
     it('Login without data', function() {
         login.go();
@@ -30,7 +30,5 @@ describe('Login with a register user', function() {
         login.submitLogin();
         login.requiredEmail();    
     })
-
-
 
 })

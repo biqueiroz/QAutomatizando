@@ -16,7 +16,7 @@ class loginPage {
     
     verificationUrl() {
         cy.url()
-        .should('include', '/customer/account/login/referer/aHR0cHM6Ly9tYWdlbnRvMi5hbGdvbGlhLmNvbS8%2C/')
+        .should('include', '/customer/account/login')
     }
 
     verificationPage() {
@@ -34,7 +34,7 @@ class loginPage {
     }
 
     submitLogin() {
-        cy.wait(3000)
+        cy.wait(2000)
         cy.get('button').contains('Sign In')
         .click()
     }

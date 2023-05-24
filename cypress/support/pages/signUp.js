@@ -1,6 +1,9 @@
 import { faker } from '@faker-js/faker/locale/pt_BR';
 
 const user = {
+    firstname: faker.person.firstName(),
+    lastname: faker.person.lastName(),
+    email: faker.internet.email(),
     password: 'teste@123',
     failpassword: 'teste123',
 }
@@ -21,10 +24,9 @@ class signupPage {
     }
 
     userData() {
-        cy.get('input[id="firstname"]').type(faker.person.firstName())
-        cy.get('input[id="lastname"]').type(faker.person.lastName())
+        cy.get('input[id="firstname"]').type(user.firstname)
+        cy.get('input[id="lastname"]').type(user.lastname)
         cy.get('input[class="checkbox"]').first().click()
-        cy.get('input[id="assistance_allowed_checkbox"]').click()
     }
 
     userSignin() {
@@ -39,7 +41,7 @@ class signupPage {
     }
 
     validationRegister() {
-        cy.get('span[class="logged-in"]').contains('Welcome')
+        cy.get('.box-information > .box-content > p').contains(user.firstname + ' ' + user.lastname)
             .should('be.visible')
         cy.get('div[class="page messages"]').contains('Thank you for registering with Main Website Store.')
             .should('be.visible')
