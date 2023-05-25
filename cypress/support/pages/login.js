@@ -1,7 +1,7 @@
 const login = {
     email: 'roni_cost@example.com',
     passwrd: 'roni_cost3@example.com',
-    invalid: 'teste@teste'
+    invalid: 'teste@teste',
 }
 
 class loginPage {

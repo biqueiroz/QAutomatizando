@@ -26,11 +26,11 @@ class signupPage {
     userData() {
         cy.get('input[id="firstname"]').type(user.firstname)
         cy.get('input[id="lastname"]').type(user.lastname)
-        cy.get('input[class="checkbox"]').first().click()
+        cy.get('input[class="checkbox"]').first().check()
     }
 
     userSignin() {
-        cy.get('input[id="email_address"]').type(faker.internet.email())
+        cy.get('input[id="email_address"]').type(user.email)
         cy.get('input[id="password"]').type(user.password)
         cy.get('input[id="password-confirmation"]').type(user.password)
     }

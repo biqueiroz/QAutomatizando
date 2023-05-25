@@ -19,6 +19,5 @@ describe('Create New Customer Account', function() {
         signUp.userSignin();
         signUp.submitForm();
         signUp.requiredField();
-
     })
 })

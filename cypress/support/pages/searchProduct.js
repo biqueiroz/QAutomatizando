@@ -1,16 +1,16 @@
 const products = {
-    product: 'Juno Jacket',
+    product: '"Juno Jacket"',
     inexistent: 'inexistenteError',
 }
 
 const messages = {
-    result: '1 result found',
-    msgError: 'No products for query',
+    result: '1 Item',
+    msgError: 'Your search returned no results.',
 }
 
 class searchProduct {
 
-    go(){
+    go() {
         cy.visit('/')
     }
 
@@ -29,7 +29,7 @@ class searchProduct {
     }
 
     validationInexistent() {
-        cy.get('.no-results').contains(messages.msgError).should('be.visible')
+        cy.contains(messages.msgError).should('be.visible')
     }
 }
 
