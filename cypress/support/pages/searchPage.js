@@ -1,3 +1,7 @@
+import SearchElements from "../elements/searchElements";
+
+const searchEl = new SearchElements();
+
 const products = {
     product: '"Juno Jacket"',
     inexistent: 'inexistenteError',
@@ -15,17 +19,19 @@ class searchProduct {
     }
 
     search() {
-        cy.get('input[id="search"]').type(products.product).type('{enter}')
+        cy.get(searchEl.search()).type(products.product)
+            .type('{enter}')
     }
 
     validationResult() {
         cy.contains(products.product).should('be.visible')
-        cy.get('div').contains(messages.result).should('be.visible')
+        cy.get(searchEl.results()).contains(messages.result).should('be.visible')
         
     }
 
     searchInexistent() {
-        cy.get('input[id="search"]').type(products.inexistent).type('{enter}')
+        cy.get(searchEl.search()).type(products.inexistent)
+            .type('{enter}')
     }
 
     validationInexistent() {

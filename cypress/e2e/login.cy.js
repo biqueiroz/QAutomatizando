@@ -1,4 +1,4 @@
-import login from '../../support/pages/login';
+import login from '../support/pages/loginPage';
 
 describe('Login with a register user', function() {
 

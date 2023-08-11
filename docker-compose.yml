@@ -1,0 +1,21 @@
+services:
+  cypress-chrome:
+    image: "cypress/included:12.13.0"
+    command: ["--browser", "chrome"]
+    working_dir: /Cypress
+    volumes:
+      - ./:/Cypress:cached
+
+  cypress-firefox:
+    image: "cypress/included:12.13.0"
+    command: ["--browser", "firefox"]
+    working_dir: /Cypress
+    volumes:
+      - ./:/Cypress:cached
+
+  cypress-edge:
+    image: "cypress/included:12.13.0"
+    command: ["--browser", "edge"]
+    working_dir: /Cypress
+    volumes:
+      - ./:/Cypress:cached

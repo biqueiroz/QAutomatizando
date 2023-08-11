@@ -1,4 +1,5 @@
-import './commands'
+import './commands';
+import '@shelex/cypress-allure-plugin';
 
 const app = window.top;
 if (!app.document.head.querySelector('[data-hide-command-log-request]')) {
