@@ -58,7 +58,7 @@ class Registration {
     }
 
     requiredField() {
-        cy.get(signupEl.invalidError()).first().contains(messages.invalidForm)
+        cy.get(signupEl.requiredField()).first().contains(messages.required)
             .should('be.visible')
     }
 }
