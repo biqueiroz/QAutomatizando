@@ -5,12 +5,18 @@
   "main": "index.js",
   "scripts": {
     "cypress:ui": "npx cypress open",
-    "cypress:run": "npx cypress run"
+    "cypress:run": "npx cypress run --config video=false --env allure=true",
+    "allure:generate": "allure generate allure-results --clean",
+    "allure:open": "allure open allure-report",
+    "allure:clear": "rm -r allure-results/ allure-report || true"
   },
   "author": "Bianca Queiroz",
   "license": "MIT",
   "dependencies": {
     "@faker-js/faker": "^8.0.1",
     "cypress": "^12.13.0"
+  },
+  "devDependencies": {
+    "@shelex/cypress-allure-plugin": "^2.40.0"
   }
 }

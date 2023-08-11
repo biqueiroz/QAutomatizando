@@ -1,4 +1,4 @@
-import addProduct from "../../support/pages/addProduct";
+import addProduct from "../support/pages/addProductPage";
 
 describe('Add a product to cart', function() {
 

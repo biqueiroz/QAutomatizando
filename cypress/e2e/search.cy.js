@@ -1,4 +1,4 @@
-import searchProduct from '../../support/pages/searchProduct';
+import searchProduct from '../support/pages/searchPage';
 
 describe('Search for a product', function() {
 
